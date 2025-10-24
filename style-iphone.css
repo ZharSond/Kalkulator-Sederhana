@@ -1,0 +1,87 @@
+body{
+    display: flex;
+    justify-content: center; /*Membuat Konten ada di tengah (kanan kiri)*/
+    align-items: center; /*Membuat konten ada di tengah (atas bawah)*/
+    height: 100vh; /*Membuat konten ada di tengah (atas bawah)*/
+    /* background-color: rgb(110, 135, 216); */
+    background-image: linear-gradient(to bottom right, rgb(24, 15, 146),rgb(154, 137, 231)); /*Membuat Bg gradien*/
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif 
+}
+
+.Kalkulator{
+    width: 275px;
+    background-color: #1c1c1c;
+    border-radius: 8px; /*Rounded bagian ujung objek*/
+    box-shadow: 0 0 10px(rgb(0,0,0.1));
+    padding: 20px;
+}
+
+#display{
+    width: 256px;
+    height: 60px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    background-color: #1c1c1c;
+    color: #ddd;
+    border-radius: 5px; /*Rounded bagian ujung objek*/
+}
+
+.button{
+    display: grid; /*Menyusun objek menjadi satu baris*/
+    grid-template-columns: repeat(4,1fr); /*Membuag shaff pada baris; repat, di ulang. 4, ada 4kolom; 1fr untuk membagi kolom agar sama rata setiap objekny*/
+    gap: 10px; /*Jarak antar objek*/
+}
+
+.btn{
+    padding: 15px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #505050;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.btn:active{
+    background-color: #7c7c7c; /*Berubah jika di Click*/
+}
+
+.operator{
+    background-color: #ff9500;
+    color: #ddd;
+}
+
+.operator:active{
+    background-color: #f3b154; /*Berubah Jika di Click*/
+}
+
+.operatorKhusus{
+    grid-row: span 2; /*Span berfungsi sebagai menggabungkan 2 row/kolom seperti fungsi marge pada excel. Angka menunjukan jumlah row/kolom yang ingin di gabungkan*/
+    background-color: #f9a825;
+    width: 100%; /*Menunjukan luas dari objek*/
+}
+
+
+.clear{
+    background-color: #d4d4d2;
+    color: #1c1c1c;
+}
+
+.zero{
+    grid-column: span 2;
+    border-radius: 50px;
+    text-align: left;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.clear:active{
+    background-color: #9c9c9c; /*Berubah jika di Click*/
+}
